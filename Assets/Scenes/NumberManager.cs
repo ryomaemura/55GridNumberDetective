@@ -23,8 +23,17 @@ public class NumberManager : MonoBehaviour
     [SerializeField] Button button14;
     [SerializeField] Button button15;
     [SerializeField] Button button16;
+    [SerializeField] Button button17;
+    [SerializeField] Button button18;
+    [SerializeField] Button button19;
+    [SerializeField] Button button20;
+    [SerializeField] Button button21;
+    [SerializeField] Button button22;
+    [SerializeField] Button button23;
+    [SerializeField] Button button24;
+    [SerializeField] Button button25;
     Button[] buttons;
-    int[] selectButtons = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    int[] selectButtons = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     [SerializeField] TextMeshProUGUI buttonText1;
     [SerializeField] TextMeshProUGUI buttonText2;
     [SerializeField] TextMeshProUGUI buttonText3;
@@ -41,6 +50,15 @@ public class NumberManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI buttonText14;
     [SerializeField] TextMeshProUGUI buttonText15;
     [SerializeField] TextMeshProUGUI buttonText16;
+    [SerializeField] TextMeshProUGUI buttonText17;
+    [SerializeField] TextMeshProUGUI buttonText18;
+    [SerializeField] TextMeshProUGUI buttonText19;
+    [SerializeField] TextMeshProUGUI buttonText20;
+    [SerializeField] TextMeshProUGUI buttonText21;
+    [SerializeField] TextMeshProUGUI buttonText22;
+    [SerializeField] TextMeshProUGUI buttonText23;
+    [SerializeField] TextMeshProUGUI buttonText24;
+    [SerializeField] TextMeshProUGUI buttonText25;
     TextMeshProUGUI[] buttonTexts;
     [SerializeField] Button maxButton;
     [SerializeField] Button minButton;
@@ -49,11 +67,11 @@ public class NumberManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI moveText;
     int moveNumber = 0;
     [SerializeField] TextMeshProUGUI resultText;
-    int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};
+    int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25};
     // mode : max, min, sum
     int[] modeBoolean = {0, 0, 0};
     int modeFlag = 0;
-    int[] addNumbers = {0, 1, 4, 5};
+    int[] addNumbers = {0, 1, 5, 6};
     int maxNumber = 0;
     int minNumber = 100;
     int sumNumber = 0;
@@ -68,8 +86,8 @@ public class NumberManager : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        buttons = new Button[] {button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button11, button12, button13, button14, button15, button16};
-        buttonTexts = new TextMeshProUGUI[] {buttonText1, buttonText2, buttonText3, buttonText4, buttonText5, buttonText6, buttonText7, buttonText8, buttonText9, buttonText10, buttonText11, buttonText12, buttonText13, buttonText14, buttonText15, buttonText16};
+        buttons = new Button[] {button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button11, button12, button13, button14, button15, button16, button17, button18, button19, button20, button21, button22, button23, button24, button25};
+        buttonTexts = new TextMeshProUGUI[] {buttonText1, buttonText2, buttonText3, buttonText4, buttonText5, buttonText6, buttonText7, buttonText8, buttonText9, buttonText10, buttonText11, buttonText12, buttonText13, buttonText14, buttonText15, buttonText16, buttonText17, buttonText18, buttonText19, buttonText20, buttonText21, buttonText22, buttonText23, buttonText24, buttonText25};
         modeButtons = new Button[] {maxButton, minButton, sumButton};
 
         resetnumbers();
@@ -159,13 +177,15 @@ public class NumberManager : MonoBehaviour
         if (selectButtons[buttonNumber] == 1) {
             resetNumberButton();
         } else if (
-            buttonNumber != 3 &
-            buttonNumber != 7 &
-            buttonNumber != 11 &
-            buttonNumber != 12 &
-            buttonNumber != 13 &
+            buttonNumber != 4 &
+            buttonNumber != 9 &
             buttonNumber != 14 &
-            buttonNumber != 15
+            buttonNumber != 19 &
+            buttonNumber != 24 &
+            buttonNumber != 20 &
+            buttonNumber != 21 &
+            buttonNumber != 22 &
+            buttonNumber != 23
         ) {
             resetNumberButton();
 
